@@ -190,6 +190,12 @@ isfreebsd(){
     return 1
 }
 
+iscygwin(){
+    [[ $OSTYPE == cygwin ]] && return 0
+        return 1
+}
+
+
 #f1# are we running within an utf environment?
 isutfenv() {
     case "$LANG $CHARSET $LANGUAGE" in
